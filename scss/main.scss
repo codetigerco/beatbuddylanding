@@ -77,6 +77,9 @@ h1, h2, h3, h4, h5, h6 {
 		h3 {
 			color: $black;
 			font-weight: 800;
+			a {
+				color: $black;
+			}
 		}
 	}
 }
@@ -156,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 	p {
 		font-size: 18px;
 	}
-	.together-box {
+	.coupon-box {
 		border: 6px solid $white;
 		background: $orange;
 		padding: 20px;
@@ -165,11 +168,11 @@ h1, h2, h3, h4, h5, h6 {
 		h3 {
 			font-weight: 800;
 		}
-		span {
+		button {
 			font-weight: 800;
 			font-size: 28px;
 			margin-bottom: 10px;
-			display: block;
+			display: inline-block;
 		}
 		p {
 			font-weight: 800;
@@ -188,6 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 		float: left;
 		margin-right: 20px;
 		margin-bottom: 50px;
+		max-width: 250px;
 		@media (max-width: $sm) {
 			float: none;
 			display: block;
@@ -200,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
 		img {
 			height: 20px;
 			position: relative;
-			left: -15px;
+			left: 0px;
 			@media (max-width: $sm) {
 				display: none;
 			}
