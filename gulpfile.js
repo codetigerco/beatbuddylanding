@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 
 // Static server
 gulp.task('browser-sync', function() {
-    browserSync.init(["_site/css/*.css", "_site/js/*.js", '_site/*.html'], {
+    browserSync.init(["_site/css/*.css", "_site/js/*.js", '_site/**/*.html'], {
         proxy:  "localhost:4000"
     });
 });
@@ -14,6 +14,6 @@ gulp.task('browser-sync', function() {
 // Watch
 gulp.task('watch', ['browser-sync'], function() {
 
-  gulp.watch('_site/*.html');
+  gulp.watch('_site/**/*.html');
 
 });
