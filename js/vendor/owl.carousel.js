@@ -2700,7 +2700,7 @@
 	Navigation.Defaults = {
 		nav: false,
 		navRewind: true,
-		navText: [ 'prev', 'next' ],
+		navText: [ 'previo', 'siguiente' ],
 		navSpeed: false,
 		navElement: 'div',
 		navContainer: false,
