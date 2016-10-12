@@ -1,6 +1,46 @@
 ---
 ---
 
+#about,
+#about .bg-blur
+  background-image: url('../img/6.jpg')
+  position: relative
+  &:before
+    content: ''
+    background: rgba(#fff, 0.8)
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+
+#faculty_header,
+#faculty_header .bg-blur
+  background-image: url('../img/1.jpg')
+
+#videos.light
+  background-image: url('../img/3.jpg')
+  &:before
+    content: ''
+    background: rgba(#fff, 0.8)
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+
+#header
+  .navbar-default
+    .navbar-nav
+      .home
+        background-image: url('../img/5.jpg')
+      .about
+        background-image: url('../img/6.jpg')
+      .faculty
+        background-image: url('../img/1.jpg')
+      .videos
+        background-image: url('../img/3.jpg')
+
 .date
   color: #fff
   font-size: 32px
