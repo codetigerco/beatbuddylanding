@@ -40,6 +40,8 @@
         background-image: url('../img/1.jpg')
       .videos
         background-image: url('../img/3.jpg')
+      .sponsors
+        background-image: url('../img/9.jpg')
 
 .date
   color: #fff
@@ -60,3 +62,24 @@
     margin: 0px 15px 0px 0px
     a
       font-size: 30px
+
+#sponsors
+  padding: 100px 20px
+  img
+    max-width: 100%
+  ul
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    flex-wrap: wrap
+    li
+      padding: 20px
+      box-sizing: border-box
+      list-style-type: none
+      display: inline-block
+      width: 20%
+      text-align: center
+      @media (max-width: 768px)
+        width: 50%
