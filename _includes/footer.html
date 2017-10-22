@@ -1,99 +1,178 @@
-<footer id="footer">
-  <div class="container">
-      <div class="row">
-          <ul class="footer-social">
-            <li><a href="mailto:cumbreglobaldeliderazgord@gmail.com"><i class="fa fa-envelope"></i></a></li>
-            <li><a href="https://www.facebook.com/cumbreglobalrd/"><i class="fa fa-facebook-official"></i></a></li>
-            <li><a href="https://www.instagram.com/cumbreglobalrd/"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="https://twitter.com/CumbreGlobalRD"><i class="fa fa-twitter"></i></a></li>
-          </ul>
-            <p>Copyright &copy;2016</p>
-      </div>
-  </div>
-</footer><!--/footer-->
+
+      <footer style="padding:10px">
+         <div class="container">
+                <div class="row">
+                  
+                    <img src="images/ECFA_200x200.png" style="float:right; width:51px; margin-left:10px;" />
+                    <a href="/index.asp" target="_blank">Home</a>
+                    <span style="color:white !important"> | </span>
+                    <a href="/sitemap.asp" target="_blank">Site Map</a>
+                    <span style="color:white !important"> | </span>
+                    <a href="/legal.asp" target="_blank">Legal</a>
+                     <span style="color:white !important"> | </span>
+                     <a href="/wca_jobs/careers.asp" target="_blank">Careers</a>
+                     <span style="color:white !important"> | </span>
+                     <a href="/about/contact.asp" target="_blank">Contact</a>
+                     <span style="color:white !important"> | </span>
+                     <a href="https://www.willowcreek.org/" target="_blank">Visit WCCC</a>
+                     <span style="color:white !important"> | </span>
+                      <a href="/about/bill_hybels.asp" target="_blank">Bill Hybels</a><br />
+                     <a href="/events/leadership/resources_rsp.asp" target="_blank">Resources</a>
+                     <span style="color:white !important"> | </span>
+                     <a href="/events/leadership/siterequest_form_rsp.asp" target="_blank">Become a Host Site</a>
+                     <span style="color:white !important"> | </span>
+                     <a href="https://www.followthegls.com" target="_blank">Follow the GLS</a>
+                     <span style="color:white !important"> | </span>
+                     <a href="https://give.willowcreek.com" target="_blank">Give</a><br />
+                     <p class="white">Willow Creek Association &bull; 67 E. Algonquin Road &bull; South Barrington, IL 60010 &bull; 800-570-9812
+                     <br />
+                     
+                      Copyright &copy;2016
+                      Willow Creek Association. Willow Creek Association is a Non-profit 501(c)3 Organization. All gifts are secure and tax-deductible.</p>
+                </div>
+            </div>
+           
+    </footer> <!-- / END FOOOTER  -->
+    </section>
 
 
 
-        <!-- End Section footer -->
+</div>
 
-       <script src="/js/vendor/jquery.easing.1.3.js"></script>
-        <script src="/js/vendor/bootstrap.js"></script>
+<!-- =========================
+   FOOTER             
+============================== -->
 
-        <script src="/js/vendor/jquery.singlePageNav.min.js"></script>
-        <script src="/js/vendor/wow.min.js"></script>
-       <script src="/js/vendor/jquery.transit.js"></script>
-        <script src="/js/vendor/jquery.jcountdown.js"></script>
 
-        <script src="/js/vendor/owl.carousel.js"></script>
-       <script src="/js/vendor/jquery.appear.js"></script>
-        <script src="/js/vendor/jquery.magnific-popup.js"></script>
-       <script src="/js/vendor/jquery.quicksand.js"></script>
-        <script src="/js/vendor/contact.js"></script>
-       <script src="/js/vendor/jquery.ticker.js"></script>
-        <script src="/js/vendor/jquery.mb.YTPlayer.js"></script>
-        <script src="/js/vendor/jquery.nicescroll.js"></script>
-        <script src="/js/vendor/lightbox.js"></script>
-        <script>
-        $(document).ready(function() {
 
-        $(".faqFunction").click(function() {
-            $(".faqFunction").css("background-color", "@color1");
-            $(this).css("background-color", "#272727");
+<!-- SCRIPTS -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.knob.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.vegas.min.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/zerif.js"></script>
+
+<script>
+$(document).ready(function() {    
+
+    $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') ) {
+        $(this).collapse('hide');
+    }
+    });
+
+
+
+
+
+    $('.open-popup-link').magnificPopup({
+      type:'ajax',    
+      showCloseBtn: true,
+      closeBtnInside: true  
+    });
+
+     $(".open-popup-link").click(function() {
+             
+            window.location.href = window.location.href + "#" + this.id;
         });
 
-        $("#faqSection").click(function() {
-            $('html, body').animate({ scrollTop:$("#faqExpalantion").offset().top}, 500);
+
+    $('.ajax-popup-link').magnificPopup({ 
+
+              type: 'iframe'
+     });
+    $('.popup').magnificPopup({ 
+
+              type: 'image'
+     });
+
+
+    var speaker = window.location.hash;
+     var param = speaker.split('#'); 
+     $('#'+param[param.length - 1]).click();
+
+
+
+    $(".faqText" ).click(function() {
+          var text =  $(this).text();
+          if (text.indexOf("+") >= 0) {
+            $(this).find("span").text('-');
+          }
+          else {
+            $(this).find("span").text('+');
+          }
         });
 
-
-
-          $(window).scroll(function() {
-            if ($(document).scrollTop() > 130) {
-
-              $(".textbelowLogo").hide();
+     $("#owl-example").owlCarousel({
+         navigation : true, // Show next and prev buttons         
+         items:4,
+         autoPlay: 3000,         
+        slideSpeed : 300,
+        paginationSpeed : 400,        
+        itemsDesktop : false,
+        itemsDesktopSmall : false,
+        itemsTablet: false,
+        itemsMobile : false,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:5,
+                nav:true,
+                loop:false
             }
+        }
+     });
 
-            else{
+     var owl = $("#owl-example");
 
-                 $(".textbelowLogo").show();
-
-            }
-          });
-
-          $("#button .bt").click(function(){
-
-             ($(".bt").text() === "Mostrar Horario") ? $(".bt").text("Esconder Horario") : $(".bt").text("Mostrar Horario");
-
-
-          })
-
-           jQuery("#button .bt").click(function(){
-            jQuery("#button .bt").removeClass('activeClass');
-            jQuery(this).toggleClass('activeClass');
-          });
-        });
+     // Custom Navigation Events
+    $(".owl-carousel-arrows .next").click(function() {
+         owl.trigger('owl.next');
+    });
+    
+    $(".owl-carousel-arrows .prev").click(function() {
+         owl.trigger('owl.prev');
+    });
 
 
+    
+    });
 
-        </script>
+    
 
-        <!-- jQuery REVOLUTION Slider  -->
-      <script type="text/javascript" src="/js/vendor/jquery.themepunch.tools.min.js"></script>
-        <script type="text/javascript" src="/js/vendor/jquery.themepunch.revolution.min.js"></script>
+    // Send search to registration page.
+    var onClickFindHostSite = function (me) {
+        var targetHref= "https://register.willowcreek.com/#/reg/select?passedThroughSearch=";
 
-        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
-                        (Load Extensions only on Local File Systems !
-                        The following part can be removed on Server for On Demand Loading) -->
-       <!-- <script type="text/javascript" src="js/vendor/extensions/revolution.extension.actions.min.js"></script>
-        <script type="text/javascript" src="js/vendor/extensions/revolution.extension.carousel.min.js"></script>
-        <script type="text/javascript" src="js/vendor/extensions/revolution.extension.kenburn.min.js"></script>
-        <script type="text/javascript" src="js/vendor/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script type="text/javascript" src="js/vendor/extensions/revolution.extension.migration.min.js"></script>
-        <script type="text/javascript" src="js/vendor/extensions/revolution.extension.navigation.min.js"></script>
-        <script type="text/javascript" src="js/vendor/extensions/revolution.extension.parallax.min.js"></script>
-        <script type="text/javascript" src="js/vendor/extensions/revolution.extension.slideanims.min.js"></script>
-        <script type="text/javascript" src="js/vendor/extensions/revolution.extension.video.min.js"></script>-->
+        $(me).attr("href", targetHref + $('#search-host-site').val());
 
-       <!-- <script type="text/javascript" src="js/vendor/jquery.scrollTo.js"></script>-->
-        <!-- Customer Slider  -->
-       <script src="/js/main.js"></script>
+    }
+
+    //button getting clicked by Enter key
+    document.getElementById("search-host-site")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        document.getElementById("find-button").click();
+    }
+    });
+
+    $(".navbar-toggle").click(function() {
+    $(".icon-bar").css("background-color","black");
+    });
+
+
+</script>
